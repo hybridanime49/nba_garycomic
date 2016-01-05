@@ -28,13 +28,7 @@ else{
 
 /*Start the Server*/
 
-app.get('/',function(req,res){
-	res.sendfile('view/index.html');
-});
 
-app.get('/addplayer',function(req,res){
-	res.sendfile('view/addplayer.html');
-});
 
 app.use('/view', express.static(__dirname + '/view'));
 app.use('/css', express.static(__dirname + '/css'));
@@ -42,7 +36,13 @@ app.use('/js', express.static(__dirname + '/js'));
 app.use('/images', express.static(__dirname + '/images'));
 
 
+app.get('/',function(req,res){
+	res.sendfile('view/index.html');
+});
 
+app.get('/addplayer',function(req,res){
+	res.sendfile('view/addplayer.html');
+});
 
 // app.get('/about',function(req,res){
 //   res.sendFile('/about.html');

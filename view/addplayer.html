@@ -1,43 +1,16 @@
 
-<!DOCTYPE html>
-  <head>
-    <title>Sample IG images from Gary comics</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    
-  </head>
-  <body ng-app="gary_comic_ig">
-    <div class="container" ng-app='gary_comic_ig'>
-      <div class="row">
-      	<div class="col-sm-12">
-      		<h2 class="text-center roboto-condense white-color">Instagram NBA Cartoons - <a href="https://www.instagram.com/garycomic/" target="_blank">Gary Comic</a></h2>
-      		<hr/>
-      	</div>
-      </div>
-
-		<div class="row" ng-controller="addPlayerController">
-			<div class="col-md-4">
-				<form>
-					<div class="form-group">
-						<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="link of image" ng-model="newPlayer.profile_picture">
-						<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="first and last name" ng-model="newPlayer.player_name">
-						<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="player position" ng-model="newPlayer.position">
-						<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="team name" ng-model="newPlayer.team">
-						<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="NBA rank" ng-model="newPlayer.rank">
-					</div>
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="submitPlayer()">Add Player</button>
-					 <p class="col-md-12 help-block error" ng-show="message">{{message}}</p>
-				</form>
+	<div class="col-md-4">
+		<form>
+			<div class="form-group">
+				<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="link of image" ng-model="newPlayer.profile_picture">
+				<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="first and last name" ng-model="newPlayer.player_name">
+				<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="player position" ng-model="newPlayer.position">
+				<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="team name" ng-model="newPlayer.team">
+				<input type="text" class="margin-bottom-10 form-control input-lg text-center" placeholder="NBA rank" ng-model="newPlayer.rank">
 			</div>
-		</div>
+			<button type="submit" class="btn btn-primary btn-lg" ng-click="submitPlayer()">Add Player</button>
+			 <p class="col-md-12 help-block error" ng-show="message">{{message}}</p>
+		</form>
+	</div>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/post-player.js"></script>
 
-</body>
-</html>
