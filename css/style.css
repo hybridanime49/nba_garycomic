@@ -1,0 +1,109 @@
+body{
+	background: #000 url('../images/nba-logo.svg') no-repeat center center;
+	background-size: cover
+}
+a, a:link, a:hover{
+	text-decoration: none;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/*Fonts*/
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.roboto-condense{
+	font-weight: 700;
+}
+
+.player-image{
+	width: 100%;
+}
+
+.padding-top-bottom-10{
+	padding: 10px 0;
+}
+
+.font-25{	
+	font-size: 25px	;
+}
+.margin-bottom-10{
+	margin-bottom: 10px;
+}
+
+.margin-bottom-25{
+	margin-bottom: 25px;
+}
+
+.white-color{
+	color: #fff;
+}
+.rank{
+	background-color: rgba(255,255,255,.8);
+}
+
+.animate-enter{
+	-webkit-transition: 4s linear all;
+	transition: 4s linear all;
+	opacity: 0;
+}
+.animate-enter:hover{
+	transition: 3s ease-in-out background-size;
+	background-size: 300%;
+}
+
+.animate-enter.animate-enter-active{
+	opacity: 1;
+}
+
+/** Flip Animation **/
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 260px;
+	height: 260px;
+
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	background: rgba(255,255,255,.2);
+	padding: 10px;
+	margin-left: -30px;
+}
