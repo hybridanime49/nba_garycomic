@@ -27,9 +27,6 @@ else{
 });
 
 /*Start the Server*/
-
-
-
 app.use('/view', express.static(__dirname + '/view'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/js', express.static(__dirname + '/js'));

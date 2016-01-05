@@ -10,7 +10,7 @@
 <div ng-cloak class="col-sm-6 margin-bottom-25 border flip-container" ng-repeat="data in player_profiles.player | orderBy: 'rank' | filter: query" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
    <div class="flipper">
       <div class="front">
-  		  <img  src="{{ data.profile_picture }}"  class=" player-image"/>
+  		  <img ng-src="{{ data.profile_picture }}"  class=" player-image"/>
       </div>
       <div class="back">
         
