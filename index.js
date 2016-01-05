@@ -10,9 +10,9 @@ app.use(bodyparser.json()); //body parse user JSON data
 */
 var connection = mysql.createConnection({
 	host : "localhost",
-	user : "admin",
-	password : "goboingo",
-	database : "sample_node_project"
+	user : "root",
+	password : "",
+	database : "nba_garycomics"
 });
 
 /*Connecting to Database*/
