@@ -11,6 +11,10 @@ app.controller('showPlayersController', ['$scope', '$http', function($scope,$htt
 		});
 	}
 	$scope.loadImages();
+
+	$scope.showInfo = function(playername){
+		alert("LET MEEEEEE" + playername);
+	}
 	
 
 }]);

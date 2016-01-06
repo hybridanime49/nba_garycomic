@@ -21,4 +21,5 @@ app.controller('addPlayerController',['$scope', '$http', function( $scope, $http
 
 	}
 
+
 }]);
