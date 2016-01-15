@@ -11,12 +11,14 @@
    <div class="flipper">
       <div class="front">
   		  <img ng-src="{{ data.profile_picture }}"  class=" player-image"/>
+
       </div>
       <div class="back" ng-click="showInfo(data.player_name)">
         
       	<h4 class="white-color roboto-condense font-25">{{ data.player_name | uppercase }}</h4>
       	<p class="white-color">{{ data.team | uppercase}}</p>
       	<span class="label label-default">{{data.position | uppercase}}</span>
+        <span class="trademark roboto-small">instagram@garycomic</span>
       </div>
   </div>
 </div>

@@ -14,7 +14,13 @@ app.controller('showPlayersController', ['$scope', '$http', function($scope,$htt
 
 	$scope.showInfo = function(playername){
 		alert("LET MEEEEEE" + playername);
+		return $scope.consoleStuff()
 	}
+
+	$scope.consoleStuff = function(){
+		console.log( 'should show sutffff');
+	}
+
 	
 
 }]);
