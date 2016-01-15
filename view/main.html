@@ -13,7 +13,7 @@
   		  <img ng-src="{{ data.profile_picture }}"  class=" player-image"/>
 
       </div>
-      <div class="back" ng-click="showInfo(data.player_name)">
+      <div class="back" ng-click="toggleModal()">
         
       	<h4 class="white-color roboto-condense font-25">{{ data.player_name | uppercase }}</h4>
       	<p class="white-color">{{ data.team | uppercase}}</p>
@@ -22,3 +22,14 @@
       </div>
   </div>
 </div>
+
+<!--custom directive -->
+<modal title="Player Info" visible="showModal">
+    <div class="form-group">
+      <label for="player_name">{{data.player_name}}</label>
+    </div>
+    <div class="form-group">
+      <label for="player_rank">Rank</label>
+    </div>
+</modal>
+
