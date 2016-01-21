@@ -8,7 +8,7 @@ app.controller('showPlayersController', ['$scope','playersFactory', function($sc
 
 	//get list of players from Factory
 	playersFactory.getPlayer().then(function(result){
-		$scope.player_profiles = result;
+		$scope.player_profiles = result.data.player;
 	});
 
 
