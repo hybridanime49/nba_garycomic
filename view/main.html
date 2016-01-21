@@ -7,7 +7,7 @@
   </div>
 
 
-<div ng-cloak class="col-sm-3 margin-bottom-25 border flip-container animated zoomInRight" ng-repeat="data in player_profiles.player | orderBy: 'rank' | filter: query" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+<div ng-cloak class="col-sm-3 margin-bottom-25 border flip-container animated zoomInRight" ng-repeat="data in player_profiles | orderBy: 'rank' | filter: query" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
    <div class="flipper">
       <div class="front">
   		  <img ng-src="{{ data.profile_picture }}"  class=" player-image"/>
@@ -24,7 +24,7 @@
 </div>
 
 <!--custom directive -->
-<modal title="Player Info" visible="showModal">
+<modal title="Player Info" visible="showModal" player="player_profiles.player">
     <div class="form-group">
       <label for="player_name">{{data.player_name}}</label>
     </div>

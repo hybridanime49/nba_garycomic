@@ -14,10 +14,17 @@ app.directive('modal', function(){
         restrict: 'E',
         transclude: true,
         replace: true,
-        scope: true,
+        // scope:{
+        // 	player : '='
+        // },
+        controller: ['$scope',  function($scope){
+        	//console.log('Controller scope', $scope);
+        	
+        }],
         link: function postLink(scope, element, attrs) {
 	        
 	        scope.title = attrs.title;
+	        //console.log(scope.title, scope);
 
 	        scope.$watch(attrs.visible, function(value){
 	          if(value == true)
