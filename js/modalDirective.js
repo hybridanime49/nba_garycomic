@@ -1,11 +1,11 @@
-app.directive('modal', function(){
+app.directive('modal', ['playersFactory', function(playersFactory){
 	return {
 		template: '<div class="modal fade">' + 
           '<div class="modal-dialog">' + 
             '<div class="modal-content">' + 
               '<div class="modal-header">' + 
                 '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>' + 
-                '<h4 class="modal-title">{{ title }} wHATISISISI</h4>' + 
+                '<h4 class="modal-title">{{ title }} wHATISISISI {{factData}}</h4>' + 
               '</div>' + 
               '<div class="modal-body" ng-transclude></div>' + 
             '</div>' + 
@@ -17,14 +17,17 @@ app.directive('modal', function(){
         // scope:{
         // 	player : '='
         // },
-        controller: ['$scope',  function($scope){
-        	//console.log('Controller scope', $scope);
+        // controller: ['$scope',  'playersFactory', function($scope, playersFactory){
+        // 	//console.log('Controller scope',  $scope.player);
         	
-        }],
+        // }],
         link: function postLink(scope, element, attrs) {
 	        
 	        scope.title = attrs.title;
-	        //console.log(scope.title, scope);
+
+	        scope.factData = playersFactory.realData;
+
+	        console.log('THIS IS SCOPE!!1', scope.factData);
 
 	        scope.$watch(attrs.visible, function(value){
 	          if(value == true)
@@ -46,4 +49,4 @@ app.directive('modal', function(){
 	        });
       	}
 	};
-});
+}]);

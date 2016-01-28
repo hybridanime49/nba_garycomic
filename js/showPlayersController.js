@@ -8,16 +8,15 @@ app.controller('showPlayersController', ['$scope','playersFactory', function($sc
 
 	//get list of players from Factory
 	playersFactory.getPlayer().then(function(result){
-		$scope.player_profiles = result.data.player;
+		  $scope.player_profiles =  result;
+		  console.log('$SCOEEEE', $scope.player_profiles);
 	});
 
-
-	$scope.showInfo = function(playername){
-		alert("LET MEEEEEE" + playername);
-		
-	};
+	$scope.yoyo = playersFactory.returnSomething();
+	console.log('!!!!!!', $scope.yoyo);
 
 	$scope.showModal = false;
+
 	$scope.toggleModal = function(){
 		$scope.showModal = !$scope.showModal;
 	};
